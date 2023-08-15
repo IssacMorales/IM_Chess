@@ -16,10 +16,12 @@ namespace Chess
         bool m_checkmate = false;
         bool m_manualBoard = false; // Don't init board on new game
         bool m_finalizedBoard = false;
+        bool m_c960 = false;
         Player m_manualPlayer = Player.WHITE;
         Piece m_manualPiece = Piece.PAWN;
 
         Chess chess;
+        Chess960 c960;
                 
         /// <summary>
         /// Stop all current activity / games and reset everything.
@@ -31,6 +33,7 @@ namespace Chess
             // stop the ai and reset chess
             AI.STOP = true;
             chess = null;
+            c960 = null;
 
             // reset turn indicator
             SetTurn(Player.WHITE);
@@ -73,7 +76,16 @@ namespace Chess
 
             // create new game for number of players
             m_aigame = (nPlayers == 0);
-            chess = new Chess(this, nPlayers, !m_manualBoard);
+            if (!m_c960)
+            {
+                chess = new Chess(this, nPlayers, !m_manualBoard);
+
+            } 
+            else
+            {
+                c960 = new Chess960(this, nPlayers, m_manualBoard);
+                //setPieceToolStripMenuItem.Enabled = true;
+            }
 
             // show turn status
             SetTurn(Player.WHITE);
@@ -215,6 +227,14 @@ namespace Chess
                 prgThinking.Value = 0;
                 prgThinking.Style = ProgressBarStyle.Continuous;
             }
+        }
+
+        private void NChess960_Click(object sender, EventArgs e)
+        {
+            SetStatus(false, "pick a mode.");
+            m_c960 = true;
+
+            m_manualBoard = true;
         }
     }
 }

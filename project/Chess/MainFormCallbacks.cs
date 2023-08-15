@@ -124,6 +124,8 @@ namespace Chess
             }
         }
 
+        
+
         private void manualPieceMenuItem_Click(object sender, EventArgs e)
         {
             String labelName = ((ToolStripMenuItem)sender).Name;

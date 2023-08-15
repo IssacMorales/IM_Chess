@@ -9,3 +9,14 @@ C:\Neumont\Q8\ExistingCode\chess\project\Chess\obj\x86\Debug\Chess.csproj.Genera
 C:\Neumont\Q8\ExistingCode\chess\project\Chess\obj\x86\Debug\Chess.csproj.CoreCompileInputs.cache
 C:\Neumont\Q8\ExistingCode\chess\project\Chess\obj\x86\Debug\Chess.exe
 C:\Neumont\Q8\ExistingCode\chess\project\Chess\obj\x86\Debug\Chess.pdb
+C:\Neumont\Q8\ExistingCode\IM_Chess\bin\debug\Chess.exe.config
+C:\Neumont\Q8\ExistingCode\IM_Chess\bin\debug\Chess.exe
+C:\Neumont\Q8\ExistingCode\IM_Chess\bin\debug\Chess.pdb
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.csproj.AssemblyReference.cache
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.csproj.SuggestedBindingRedirects.cache
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.MainForm.resources
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.Properties.Resources.resources
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.csproj.GenerateResource.cache
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.exe
+C:\Neumont\Q8\ExistingCode\IM_Chess\project\Chess\obj\x86\Debug\Chess.pdb
