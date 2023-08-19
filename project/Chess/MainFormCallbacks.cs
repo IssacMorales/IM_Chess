@@ -38,6 +38,7 @@ namespace Chess
             // setup menu
             setPieceToolStripMenuItem.Enabled = false;
             manualBoardToolStripMenuItem.Checked = false;
+            NChess960.Checked = false;
             endCurrentGameToolStripMenuItem.Enabled = false;
         }
 
@@ -124,7 +125,6 @@ namespace Chess
             }
         }
 
-        
 
         private void manualPieceMenuItem_Click(object sender, EventArgs e)
         {
@@ -162,6 +162,7 @@ namespace Chess
         {
             // no longer building board
             m_manualBoard = false;
+            m_c960 = false;
             m_finalizedBoard = true;
 
             // menu changes
@@ -170,13 +171,28 @@ namespace Chess
             doneToolStripMenuItem.Enabled = false;
 
             // start the manual game
-            SetStatus(false, "White's Turn");
-            tmrWhite.Start();
-            m_checkmate = chess.detectCheckmate();
-
-            if (m_aigame && !m_checkmate)
+            
+            if(NChess960.Checked == true)
             {
-                new Thread(chess.AISelect).Start();
+                SetStatus(false, "White's Turn");
+                tmrWhite.Start();
+                m_checkmate = c960.detectCheckmate();
+
+                if (m_aigame && !m_checkmate)
+                {
+                    new Thread(c960.AISelect).Start();
+                }
+            }
+            else if(NChess960.Checked == false)
+            {
+                SetStatus(false, "White's Turn");
+                tmrWhite.Start();
+                m_checkmate = chess.detectCheckmate();
+
+                if(m_aigame && !m_checkmate)
+                {
+                    new Thread(chess.AISelect).Start();
+                }
             }
         }
 

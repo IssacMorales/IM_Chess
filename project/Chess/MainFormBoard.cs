@@ -93,7 +93,7 @@ namespace Chess
 
         private void BoardClick(object sender, EventArgs e)
         {
-            if (chess != null && !m_checkmate)
+            if ((chess != null && !m_checkmate) || (c960 != null && !m_checkmate))
             {
                 // clear board
                 for (int i = 0; i < 8; i++)
@@ -128,24 +128,50 @@ namespace Chess
                         // place piece
                         else
                         {
-                            chess.Board.SetPiece(m_manualPiece, m_manualPlayer, k, i);
-                            SetPiece(m_manualPiece, m_manualPlayer, k, i);
-
-                            if (m_manualPiece == Piece.KING)
+                            if(NChess960.Checked == true)
                             {
-                                if (m_manualPlayer == Player.WHITE)
-                                {
-                                    White_King.Enabled = false;
-                                }
-                                else
-                                {
-                                    Black_King.Enabled = false;
-                                }
+                                c960.Board.SetPiece(m_manualPiece, m_manualPlayer, k, i);
+                                SetPiece(m_manualPiece, m_manualPlayer, k, i);
 
-                                // both players have kings, we could technically start
-                                if (!White_King.Enabled && !Black_King.Enabled)
+                                if (m_manualPiece == Piece.KING)
                                 {
-                                    doneToolStripMenuItem.Enabled = true;
+                                    if (m_manualPlayer == Player.WHITE)
+                                    {
+                                        White_King.Enabled = false;
+                                    }
+                                    else
+                                    {
+                                        Black_King.Enabled = false;
+                                    }
+
+                                    // both players have kings, we could technically start
+                                    if (!White_King.Enabled && !Black_King.Enabled)
+                                    {
+                                        doneToolStripMenuItem.Enabled = true;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                chess.Board.SetPiece(m_manualPiece, m_manualPlayer, k, i);
+                                SetPiece(m_manualPiece, m_manualPlayer, k, i);
+
+                                if (m_manualPiece == Piece.KING)
+                                {
+                                    if (m_manualPlayer == Player.WHITE)
+                                    {
+                                        White_King.Enabled = false;
+                                    }
+                                    else
+                                    {
+                                        Black_King.Enabled = false;
+                                    }
+
+                                    // both players have kings, we could technically start
+                                    if (!White_King.Enabled && !Black_King.Enabled)
+                                    {
+                                        doneToolStripMenuItem.Enabled = true;
+                                    }
                                 }
                             }
                         }

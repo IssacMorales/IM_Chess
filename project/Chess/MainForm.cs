@@ -233,8 +233,12 @@ namespace Chess
         {
             SetStatus(false, "pick a mode.");
             m_c960 = true;
-
             m_manualBoard = true;
+
+            manualBoardToolStripMenuItem.Checked = true;
+            NChess960.Checked = true;
+
         }
+
     }
 }

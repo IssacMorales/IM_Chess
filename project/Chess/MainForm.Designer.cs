@@ -34,9 +34,9 @@
             this.newAIGame = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.new2PlayerGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NChess960 = new System.Windows.Forms.ToolStripMenuItem();
             this.endCurrentGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.NChess960 = new System.Windows.Forms.ToolStripMenuItem();
             this.manualBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setPieceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,9 +104,9 @@
             this.newAIGame,
             this.newGameToolStripMenuItem,
             this.new2PlayerGameToolStripMenuItem,
-            this.NChess960,
             this.endCurrentGameToolStripMenuItem,
             this.toolStripSeparator2,
+            this.NChess960,
             this.manualBoardToolStripMenuItem,
             this.setPieceToolStripMenuItem,
             this.doneToolStripMenuItem,
@@ -137,13 +137,6 @@
             this.new2PlayerGameToolStripMenuItem.Text = "New Player vs Player Game";
             this.new2PlayerGameToolStripMenuItem.Click += new System.EventHandler(this.NewGame);
             // 
-            // NChess960
-            // 
-            this.NChess960.Name = "NChess960";
-            this.NChess960.Size = new System.Drawing.Size(326, 34);
-            this.NChess960.Text = "New Chess960";
-            this.NChess960.Click += new System.EventHandler(this.NChess960_Click);
-            // 
             // endCurrentGameToolStripMenuItem
             // 
             this.endCurrentGameToolStripMenuItem.Name = "endCurrentGameToolStripMenuItem";
@@ -155,6 +148,13 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(323, 6);
+            // 
+            // NChess960
+            // 
+            this.NChess960.Name = "NChess960";
+            this.NChess960.Size = new System.Drawing.Size(326, 34);
+            this.NChess960.Text = "New Chess960";
+            this.NChess960.Click += new System.EventHandler(this.NChess960_Click);
             // 
             // manualBoardToolStripMenuItem
             // 
@@ -411,7 +411,7 @@
             this.splitView.Panel2.Controls.Add(this.label2);
             this.splitView.Panel2MinSize = 200;
             this.splitView.Size = new System.Drawing.Size(951, 646);
-            this.splitView.SplitterDistance = 703;
+            this.splitView.SplitterDistance = 679;
             this.splitView.SplitterWidth = 6;
             this.splitView.TabIndex = 2;
             // 

@@ -164,6 +164,7 @@ namespace Chess
                 SetPiece(Piece.PAWN, Player.WHITE, i, 1);
                 SetPiece(Piece.PAWN, Player.BLACK, i, 6);
             }
+            
         }
 
         public void SetPiece(Piece piece, Player player, int letter, int number)
